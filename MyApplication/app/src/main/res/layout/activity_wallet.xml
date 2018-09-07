@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/bg_background"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <android.support.v7.widget.Toolbar
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimaryDark"
+        app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="계정 관리"
+            android:textStyle="bold"
+            android:layout_gravity="center"
+            android:id="@+id/toolbar_title"
+            android:textSize="20sp"/>
+
+    </android.support.v7.widget.Toolbar>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:text="자전거 대여 시 결제에 사용할\n지갑 주소입니다."
+        android:textSize="20dp"
+        android:padding="60dp"
+        android:textStyle="bold"
+        android:lineSpacingExtra="15dp"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <EditText
+            android:id="@+id/walletInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:hint="지갑 주소"
+            android:inputType="textCapWords"
+            android:textSize="18dp" />
+
+
+        <ImageButton
+            android:id="@+id/walletButton"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="end"
+            style="?android:attr/borderlessButtonStyle"
+            android:onClick="onButton2Clicked"
+            android:scaleType="center"
+            app:srcCompat="@drawable/btn_create" />
+    </LinearLayout>
+
+</LinearLayout>
